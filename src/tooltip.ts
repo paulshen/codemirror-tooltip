@@ -264,8 +264,8 @@ const tooltipPlugin = ViewPlugin.fromClass(class {
         dom.style.top = (top - measured.parent.top) + "px"
         dom.style.left = (left - measured.parent.left) + "px"
       } else {
-        dom.style.top = top + "px"
-        dom.style.left = left + "px"
+        dom.style.top = (top - editor.top + 32) + "px"
+        dom.style.left = (left - editor.left) + "px"
       }
       if (arrow) arrow.style.left = `${pos.left + (ltr ? offset.x : -offset.x) - (left + Arrow.Offset - Arrow.Size)}px`
 
